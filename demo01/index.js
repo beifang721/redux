@@ -35,5 +35,4 @@ addBtn.addEventListener('click', function(){
 
 minusBtn.addEventListener('click', function() {
   store.dispatch({ type: MINUS })
-  
 })

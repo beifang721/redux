@@ -1,7 +1,7 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-13 19:37:55
- * @LastEditTime: 2020-07-14 11:37:44
+ * @LastEditTime: 2020-07-14 18:01:00
  * @Description: 
  */
 
@@ -15,16 +15,15 @@ function createStore(reducer, initialState) {
 
   function dispatch(action) {
     state = reducer(action, state);
-
     console.log(listeners);
     listeners.forEach(l=>l());
   }
 
   function subscribe(listener) {
     listeners.push(listener);
-    return function () {
+    return function unsubscribe() {
       const index = listeners.indexOf(listener);
-      listeners.splice(index, 1);
+      if (index > -1) listeners.splice(index, 1);
     };
   }
 
