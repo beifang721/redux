@@ -1,8 +1,8 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-13 19:37:55
- * @LastEditTime: 2020-07-16 10:07:47
- * @Description: 
+ * @LastEditTime: 2020-07-16 19:53:56
+ * @Description: 创建仓库这是最核心的部分
  */
 
 
@@ -13,7 +13,7 @@
   */
 
 export default function createStore(reducer, initialState) {
-  // 组件使用的state，这个state是唯一的
+  // 这个state是唯一的，所有的获取修改都是这个state
   let state = initialState; 
   let listeners = [];
   function getState() {
@@ -21,7 +21,9 @@ export default function createStore(reducer, initialState) {
   }
 
   function dispatch(action) {
-    state = reducer(action, state);
+    // console.log('-----',reducer);
+    // reducer函数的目的就是返回更新后状态   然后赋值给state， 这样再去执行getState()拿到的就是新的状态
+    state = reducer(state, action);
     listeners.forEach(l=>l());
   }
 
@@ -33,7 +35,7 @@ export default function createStore(reducer, initialState) {
     };
   }
 
-  dispatch({type: '@xx/init'})
+  dispatch({type: '@xx/init'});
   return { dispatch, getState, subscribe }
 }
 

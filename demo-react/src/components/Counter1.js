@@ -1,14 +1,14 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-14 14:41:25
- * @LastEditTime: 2020-07-16 19:44:24
+ * @LastEditTime: 2020-07-16 17:51:39
  * @Description: 
  */ 
 import React,{ useState, useEffect } from 'react';
 import store from '../store';
 
 import bindActionCreators from '../redux/bindActionCreators';
-import actions from '../store/actions/counter';
+import actions from '../store/actions/counter1';
 
 
 const boundActions = bindActionCreators(actions, store.dispatch);
@@ -21,13 +21,13 @@ const boundActions = bindActionCreators(actions, store.dispatch);
  */
 export default function Counter() {
   const [state, setstate] = useState(()=>{
-    return store.getState().counter;
+    return store.getState().counter1;
   });
 
 
   useEffect(() => {
     const unsubscribe = store.subscribe(()=>{
-      const data = store.getState().counter;
+      const data = store.getState().counter1;
       setstate({ ...state, ...data });
     })
     return () => {
@@ -40,8 +40,8 @@ export default function Counter() {
       {/* <button onClick={add()}>+</button>
       <button onClick={minus} >-</button> */}
       
-      <button onClick={()=>{boundActions.add(2)}}>+</button>
-      <button onClick={boundActions.minus} >-</button>
+      <button onClick={()=>{boundActions.add1(2)}}>+</button>
+      <button onClick={boundActions.minus1} >-</button>
     </>
   )
 }
