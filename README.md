@@ -1,7 +1,7 @@
 <!--
  * @Author: yqj
  * @Date: 2020-07-14 11:56:58
- * @LastEditTime: 2020-07-16 16:32:18
+ * @LastEditTime: 2020-07-19 13:13:28
  * @Description: 
 --> 
 # redux 学习
@@ -12,5 +12,6 @@
 
 
 
-### demo-react
-  - 在`react`实现`redux`，功能比较完整。
+### reduxsource
+  - 实现redux核心代码和demo应用
+  

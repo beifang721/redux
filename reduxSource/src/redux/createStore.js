@@ -1,7 +1,7 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-13 19:37:55
- * @LastEditTime: 2020-07-16 19:53:56
+ * @LastEditTime: 2020-07-19 13:10:55
  * @Description: 创建仓库这是最核心的部分
  */
 
@@ -34,7 +34,7 @@ export default function createStore(reducer, initialState) {
       if (index > -1) listeners.splice(index, 1);
     };
   }
-
+  
   dispatch({type: '@xx/init'});
   return { dispatch, getState, subscribe }
 }
