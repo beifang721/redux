@@ -1,8 +1,8 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-20 13:33:57
- * @LastEditTime: 2020-07-20 14:11:12
- * @Description: 
+ * @LastEditTime: 2020-07-20 14:31:28
+ * @Description: 处理器
  */ 
 
 import { CHANGE_COLOR } from "./action-type";
