@@ -1,7 +1,7 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-14 14:41:25
- * @LastEditTime: 2020-07-18 17:23:21
+ * @LastEditTime: 2020-07-24 17:27:01
  * @Description: 
  */ 
 import React,{ useState, useEffect, memo } from 'react';
@@ -46,7 +46,7 @@ const boundActions = bindActionCreators(actions, store.dispatch);
         {/* <button onClick={()=>{boundActions.add1(2)}}>+</button>
         <button onClick={boundActions.minus1} >-</button> */}
   
-        <button onClick={()=>{props.add1(10)}}>+</button>
+        <button onClick={()=>{props.add1()}}>+</button>
         <button onClick={props.minus1} >-</button>
       </>
     )
