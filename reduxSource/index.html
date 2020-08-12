@@ -1,0 +1,51 @@
+<!--
+ * @Author: yqj
+ * @Date: 2020-07-31 21:18:23
+ * @LastEditTime: 2020-07-31 21:25:07
+ * @Description: 
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="parent1">
+    <div id="child1" style="height:200px;background:#0cc">
+    冒泡
+    </div>
+  </div>
+  
+  <div id="parent2">
+    <div id="child2" style="height:200px;background:#0cc">
+    捕获
+    </div>
+  </div>
+  
+  <script>
+    var parent1 = document.getElementById("parent1");
+    var child2 = document.getElementById("child1");
+    var parent2 = document.getElementById("parent2");
+    var child2 = document.getElementById("child2");
+    // parent1.addEventListener('click', function(){
+    //   alert("this is parent element");
+    // });
+    // child1.addEventListener('click', function(){
+    //   alert("this is child element");
+    // });
+    // parent2.addEventListener('click', function(){
+    //   alert("this is parent element");
+    // }, true);
+    // child2.addEventListener('click', function(){
+    //   alert("this is child element");
+    // }, true);
+
+    document.addEventListener('click', function(e){
+      alert("this is document element");
+      console.log(e);
+    }, false);
+  </script>
+</body>
+</html>

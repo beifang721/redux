@@ -1,11 +1,17 @@
 function add1(str){
-  return "1" + str;
+  return function(){
+    
+  };
 }
 function add2(str){
-  return "2" + str;
+  return function(){
+
+  };
 }
 function add3(str){
-  return "3" + str;
+  return function(){
+
+  };
 }
 // const result = add3(add2(add1('ceshi')));
 

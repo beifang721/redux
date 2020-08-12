@@ -1,7 +1,7 @@
 /*
  * @Author: yqj
  * @Date: 2020-07-16 14:45:04
- * @LastEditTime: 2020-07-29 15:29:44
+ * @LastEditTime: 2020-07-31 14:44:09
  * @Description: 
  */ 
 import { ADD, MINUS } from '../actionType';
@@ -20,7 +20,7 @@ import { ADD, MINUS } from '../actionType';
   promiseAdd(){
     return {
       type: ADD,
-      payload: new Promise(function (resolve, reject) {
+      amount: new Promise(function (resolve, reject) {
         setTimeout(() => {
           console.log('xxxxxx', resolve);
           resolve(1)
