@@ -2,7 +2,7 @@
  * @Author: yqj
  * @Date: 2020-07-14 14:48:19
  * @LastEditTime: 2020-07-31 17:15:14
- * @Description: 
+ * @Description: 中间件原理其实就是重写dispath方法   中间件A -> 中间件B-> 中间件C-> 原始 dispatch -> 中间件C -> 中间件B -> 中间件A
  */ 
 import createStore from '../redux/createStore';
 import rootReducer from './reducers';
